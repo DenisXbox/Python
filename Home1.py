@@ -22,13 +22,29 @@
 # x=2; y=4-> 1
 # x=-34; y=-30 -> 3
 
-x = int(input('input x: '))
-y = int(input('input y: '))
-if x > 0 and y > 0:
-    print('1')
-if x < 0 and y > 0:
-    print('2')
-if x < 0 and y < 0:
-   print('3')
-if x > 0 and y < 0:
-   print('4')
+#x = int(input('input x: '))
+#y = int(input('input y: '))
+#if x > 0 and y > 0:
+#   print('1')
+#if x < 0 and y > 0:
+#   print('2')
+#if x < 0 and y < 0:
+#   print('3')
+#if x > 0 and y < 0:
+#   print('4')
+
+
+# 3. Напишите программу, которая по заданному номеру четверти, 
+# показывает диапазон возможных координат точек в этой четверти (x и y).
+
+n = int(input('input quarter number: '))
+if n < 1 or n > 4:
+    print('Please, repeat the input')
+elif n == 1:
+    print('x > 0 and y > 0')
+elif n == 2:
+    print('x < 0 and y > 0')
+elif n == 3:
+    print('x < 0 and y < 0')
+elif n == 4:
+    print('x > 0 and y < 0')
