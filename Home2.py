@@ -39,6 +39,7 @@
 
 import random
 
+
 def fill_list(n: int) -> list: 
     new_list = [random.randint(-n, n)]
     for i in range(1, n):
