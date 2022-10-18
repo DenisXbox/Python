@@ -17,14 +17,28 @@
 # - [2, 3, 4, 5, 6] => [12, 15, 16];
 # - [2, 3, 5, 6] => [12, 15]
 
-list = [2, 3, 6, 4, 3, 5]
+#list = [2, 3, 6, 4, 3, 5]
 
-if len(list)%2 == 0:
-    size = len(list) // 2
-import math 
-size = math.ceil(len(list)/2)
-print(size)
-list2 = []
-for i in range(size):
-    list2.append(list[i]*list[-i - 1])
-print(list2)
+#if len(list)%2 == 0:
+#    size = len(list) // 2
+#import math 
+#size = math.ceil(len(list)/2)
+#print(size)
+#list2 = []
+#for i in range(size):
+#    list2.append(list[i]*list[-i - 1])
+#print(list2)
+
+
+# Задайте список из вещественных чисел. Напишите программу, 
+# которая найдёт разницу между максимальным и минимальным значением дробной части элементов.
+# Пример:
+# - [1.1, 1.2, 3.1, 5, 10.01] => 0.19
+
+x = [1.1, 1.2, 3.1, 5, 10.01]
+x1 = []
+for i in range(len(x)):
+    if x[i] % 1 != 0:
+        x1.append(x[i])
+x2 = [round(x1[i] % 1, 2) for i in range(len(x1))]
+print(f"{x2} => {max(x2) - min(x2)}")
